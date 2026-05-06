@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Invitación XV - Danna Emireth</title>
+    <link rel="icon" type="image/png" href="images/icon/favicon.png">
+    <link rel="stylesheet" href="Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="audio-sobre" src="audio/sonido_sobre.mp3" preload="auto"></audio>
+
+    <div class="main-container" id="pantalla-sobre">
+        <div class="header-titulos">
+            <h1 class="titulo-principal">Danna Emireth</h1>
+            <h2 class="subtitulo">MIS XV AÑOS</h2>
+        </div>
+
+        <div class="sobre-contenedor" id="sobre-click" onclick="abrirInvitacion()">
+            <img src="images/elementos/sobre_cerrado.png" id="img-sobre" alt="Sobre de invitación">
+        </div>
+
+        <p class="texto-guia">Abre el sobre</p>
+    </div>
+
+    <div class="invitacion-tarjeta" id="tarjeta">
+        
+        <section class="seccion-bg seccion-1" style="background-image: url('images/fondos/1.jpg');">
+            <div class="contenido-texto superior-espacio">
+                <p class="intro-texto reveal fade-up">Te invito a celebrar</p>
+                
+                <div class="titulo-xv reveal scale-in delay-1">
+                    <span class="mis">Mis</span>
+                    <span class="numero">15</span>
+                    <span class="anos">años</span>
+                </div>
+
+                <div class="reproductor reveal fade-up delay-2" id="reproductor-card">
+                    <p class="cancion-txt">Escucha mi canción favorita</p>
+                    
+                    <audio id="audio-invitacion" src="audio/tu_cancion.mp3" preload="metadata"></audio>
+
+                    <div class="progreso-container">
+                        <span class="tiempo" id="tiempo-actual">00:00</span>
+                        <div class="barra-base" id="barra-progreso">
+                            <div class="barra-activa" id="progreso-activo">
+                                <div class="punto"></div>
+                            </div>
+                        </div>
+                        <span class="tiempo" id="tiempo-total">00:00</span>
+                    </div>
+                    
+                    <div class="controles">
+                        <span class="icono-control" id="btn-reiniciar" title="Reiniciar">
+                            <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+                        </span>
+                        <span class="icono-control" id="btn-atrasar" title="Atrasar 10s">
+                            <svg viewBox="0 0 24 24"><path d="M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z"/></svg>
+                        </span>
+                        <span class="icono-control play" id="btn-play" title="Reproducir/Pausar">
+                            <svg id="icono-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <svg id="icono-pausa" viewBox="0 0 24 24" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </span>
+                        <span class="icono-control" id="btn-adelantar" title="Adelantar 10s">
+                            <svg viewBox="0 0 24 24"><path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <p class="frase-emotiva reveal fade-up delay-3">
+                    Rodeada del amor de mi familia, me llena de alegría invitarte a celebrar conmigo este día tan especial.
+                </p>
+            </div>
+
+            <div class="contador-container reveal scale-in">
+                <p class="contador-label">YA CASI LLEGA EL GRAN DÍA</p>
+                <div class="contador-rojo" id="contador-rojo">
+                    00 Días | 00 Hrs | 00 Min | 00 Seg
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-bg seccion-2" style="background-image: url('images/fondos/C.png');">
+            <div class="contenido-texto">
+                
+                <div class="fecha-bloque reveal scale-in">
+                    <span class="dia-texto">SÁBADO</span>
+                    <div class="dia-numero">
+                        <span class="num">29</span>
+                        <span class="mes">AGOSTO</span>
+                    </div>
+                    <span class="anio">2026</span>
+                </div>
+
+                <p class="frase-padres reveal fade-up delay-1">Con la bendición de Dios y en compañía de mis padres:</p>
+                <div class="nombres-padres reveal fade-up delay-2">
+                    OSCAR EDEN<br>
+                    <span class="ampersand">&</span><br>
+                    YESICA LEAL
+                </div>
+
+                <div class="espaciador-foto-media"></div>
+
+                <h2 class="titulo-itinerario reveal fade-up">ITINERARIO</h2>
+
+                <div class="evento-item reveal fade-right delay-1">
+                    <img src="images/icon/iglesia.png" alt="Iglesia" class="icono-evento">
+                    <div class="detalles-evento">
+                        <h3>CEREMONIA RELIGIOSA</h3>
+                        <p>Parroquia San Pedro Apóstol</p>
+                        <p class="hora">2:00 pm</p>
+                        <a href="https://maps.app.goo.gl/5CRZNxUP9J3D1xZ59" class="btn-vino">VER UBICACIÓN</a>
+                    </div>
+                </div>
+
+                <div class="evento-item alineacion-derecha reveal fade-left delay-2">
+                    <div class="detalles-evento">
+                        <h3>RECEPCIÓN</h3>
+                        <p>Quinta Guachochi</p>
+                        <p class="hora">4:00 pm</p>
+                        <a href="https://maps.app.goo.gl/M3M1qqUTPg6EZwuv5" class="btn-vino">VER UBICACIÓN</a>
+                    </div>
+                    <img src="images/icon/salon.png" alt="Recepción" class="icono-evento">
+                </div>
+
+                <div class="evento-item reveal fade-right delay-3">
+                    <img src="images/icon/baile.png" alt="Baile" class="icono-evento">
+                    <div class="detalles-evento">
+                        <h3>BAILE</h3>
+                        <p>Quinta Guachochi</p>
+                        <p class="hora">6:00 pm</p>
+                    </div>
+                </div>
+
+<div class="evento-item alineacion-derecha reveal fade-left delay-4">
+    <div class="detalles-evento">
+        <h3>CENA</h3>
+        <p>Quinta Guachochi</p>
+        <p class="hora">8:00 pm</p>
+    </div>
+    <img src="images/icon/cena.png" alt="Cena" class="icono-evento">
+</div>
+
+            </div>
+        </section>
+
+        <section class="seccion-bg seccion-3" style="background-image: url('images/fondos/D.png');">
+            
+            <div class="espaciador-polaroids"></div>
+
+            <div class="contenido-texto">
+                <h2 class="titulo-dress reveal fade-up">DRESS CODE</h2>
+                <img src="images/icon/dress.png" alt="Dress Code" class="icono-dress reveal scale-in delay-1">
+                
+                <p class="txt-formal reveal fade-up delay-2">Ven formal y presentable:<br>queremos que te luzcas en este día tan especial.</p>
+                <p class="txt-rojo reveal fade-up delay-3">Colores reservados para la quinceañera y su corte:</p>
+                
+                <div class="colores-prohibidos reveal scale-in delay-3">
+                    <div class="color-circulo" style="background-color: #FFB6C1;" title="Rosa"></div> 
+                    <div class="color-circulo" style="background-color: #7D0F16;" title="Guindo"></div> 
+                    <div class="color-circulo" style="background-color: #FF0000;" title="Rojo"></div> 
+                    <div class="color-circulo" style="background-color: #DC143C;" title="Carmesí"></div> 
+                </div>
+
+                <p class="txt-evitar reveal fade-up">Agradecemos tu apoyo evitando el uso de estas tonalidades en tu vestimenta.</p>
+
+                <p class="frase-esperamos reveal fade-up delay-1">Para nosotros es muy importante contar con tu presencia.</p>
+                <p class="te-esperamos reveal fade-up delay-2">¡Te esperamos!</p>
+
+                <a href="https://wa.me/528979713312?text=Muchas%20gracias%20por%20invitarme%20a%20la%20quinceañera%20de%20Danna%20confirma%20mi%20asistencia" 
+                   class="btn-vino btn-grande reveal scale-in delay-3" target="_blank">
+                    CONFIRMAR ASISTENCIA
+                </a>
+                
+                <p class="txt-confirmar reveal fade-up delay-3">Favor de confirmar antes del 20 de julio</p>
+            </div>
+            
+            <div class="espaciador-flores"></div>
+        </section>
+
+    </div>
+
+    <button id="btn-arriba" class="btn-flotante" onclick="volverArriba()">
+        <svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </button>
+
+    <script>
+        // =========================================
+        // ANIMACIÓN DEL SOBRE Y TARJETA
+        // =========================================
+        function abrirInvitacion() {
+            const sobre = document.getElementById('img-sobre');
+            const texto = document.querySelector('.texto-guia');
+            const titulos = document.querySelector('.header-titulos');
+            const pantallaSobre = document.getElementById('pantalla-sobre');
+            const tarjeta = document.getElementById('tarjeta');
+            const audioSobre = document.getElementById('audio-sobre');
+
+            audioSobre.play().catch(e => console.log("El navegador bloqueó el auto-play del sonido", e));
+
+            sobre.src = 'images/elementos/sobre_abierto.png'; 
+            
+            texto.style.opacity = '0';
+            titulos.style.opacity = '0';
+            
+            setTimeout(() => {
+                pantallaSobre.classList.add('sobre-abierto-animacion');
+                
+                setTimeout(() => {
+                    pantallaSobre.style.display = 'none';
+                    tarjeta.style.display = 'block'; 
+                    
+                    setTimeout(() => {
+                        tarjeta.classList.add('activa');
+                        initScrollAnimations(); // Iniciar observer cuando la tarjeta se abre
+                    }, 50);
+                    
+                }, 800); 
+            }, 700); 
+        }
+
+        // =========================================
+        // SCROLL REVEAL ANIMATIONS (SUPER PRO)
+        // =========================================
+        function initScrollAnimations() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observerOptions = {
+                root: document.getElementById('tarjeta'), // Observamos el scroll dentro de la tarjeta
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // observer.unobserve(entry.target); // Si quieres que la animación se repita al subir, deja esto comentado
+                    }
+                });
+            }, observerOptions);
+
+            reveals.forEach(reveal => {
+                observer.observe(reveal);
+            });
+        }
+
+        // =========================================
+        // LÓGICA DEL CONTADOR
+        // =========================================
+        const fechaEvento = new Date("August 29, 2026 14:00:00").getTime();
+
+        const actualizarContador = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaEvento - ahora;
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            const formatoDias = dias < 10 ? "0" + dias : dias;
+            const formatoHoras = horas < 10 ? "0" + horas : horas;
+            const formatoMin = minutos < 10 ? "0" + minutos : minutos;
+            const formatoSeg = segundos < 10 ? "0" + segundos : segundos;
+
+            document.getElementById("contador-rojo").innerHTML = 
+                formatoDias + " Días | " + formatoHoras + " Hrs | " + formatoMin + " Min | " + formatoSeg + " Seg";
+
+            if (distancia < 0) {
+                clearInterval(actualizarContador);
+                document.getElementById("contador-rojo").innerHTML = "¡Llegó el gran día!";
+            }
+        }, 1000);
+
+        // =========================================
+        // LÓGICA DEL REPRODUCTOR DE MÚSICA
+        // =========================================
+        const audio = document.getElementById('audio-invitacion');
+        const btnPlay = document.getElementById('btn-play');
+        const iconoPlay = document.getElementById('icono-play');
+        const iconoPausa = document.getElementById('icono-pausa');
+        const progresoActivo = document.getElementById('progreso-activo');
+        const barraProgreso = document.getElementById('barra-progreso');
+        const tiempoActual = document.getElementById('tiempo-actual');
+        const tiempoTotal = document.getElementById('tiempo-total');
+        const btnReiniciar = document.getElementById('btn-reiniciar');
+        const btnAtrasar = document.getElementById('btn-atrasar');
+        const btnAdelantar = document.getElementById('btn-adelantar');
+        const reproductorContenedor = document.getElementById('reproductor-card');
+
+        let isPlaying = false;
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return "00:00";
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min < 10 ? '0' : ''}${min}:${sec < 10 ? '0' : ''}${sec}`;
+        }
+
+        audio.addEventListener('loadedmetadata', () => {
+            tiempoTotal.textContent = formatTime(audio.duration);
+            progresoActivo.style.width = "0%";
+        });
+
+        btnPlay.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                iconoPlay.style.display = "block";
+                iconoPausa.style.display = "none";
+                reproductorContenedor.classList.remove('playing');
+            } else {
+                audio.play();
+                iconoPlay.style.display = "none";
+                iconoPausa.style.display = "block";
+                reproductorContenedor.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const porcentaje = (audio.currentTime / audio.duration) * 100;
+            progresoActivo.style.width = `${porcentaje}%`;
+            tiempoActual.textContent = formatTime(audio.currentTime);
+            
+            if(audio.ended){
+                iconoPlay.style.display = "block";
+                iconoPausa.style.display = "none";
+                reproductorContenedor.classList.remove('playing');
+                isPlaying = false;
+            }
+        });
+
+        barraProgreso.addEventListener('click', (e) => {
+            const width = barraProgreso.clientWidth;
+            const clickX = e.offsetX;
+            const duracion = audio.duration;
+            audio.currentTime = (clickX / width) * duracion;
+        });
+
+        btnReiniciar.addEventListener('click', () => {
+            audio.currentTime = 0;
+        });
+
+        btnAtrasar.addEventListener('click', () => {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        });
+
+        btnAdelantar.addEventListener('click', () => {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        });
+
+        // =========================================
+        // LÓGICA DEL BOTÓN REGRESAR ARRIBA
+        // =========================================
+        const tarjetaDiv = document.getElementById('tarjeta');
+        const btnArriba = document.getElementById('btn-arriba');
+
+        tarjetaDiv.addEventListener('scroll', () => {
+            if (tarjetaDiv.scrollTop > 300) {
+                btnArriba.classList.add('visible');
+            } else {
+                btnArriba.classList.remove('visible');
+            }
+        });
+
+        function volverArriba() {
+            tarjetaDiv.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
