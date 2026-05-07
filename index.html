@@ -15,6 +15,31 @@
     <link rel="icon" type="image/png" href="images/icon/favicon.png">
     <link rel="stylesheet" href="Styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos para el Footer Sutil de Codragon */
+        .footer-codragon {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0 20px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            color: rgba(0, 0, 0, 0.3); /* Casi imperceptible */
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-codragon a {
+            color: rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .footer-codragon a:hover {
+            color: #7D0F16; /* Color vino al pasar el mouse */
+        }
+    </style>
 </head>
 <body>
 
@@ -208,6 +233,10 @@
                     <a href="https://app.eventpics.net/tGg87Lwn7sM4" class="btn-vino" style="padding: 12px 25px; font-size: 0.8rem; letter-spacing: 1px;" target="_blank">SUBIR FOTOS AQUÍ</a>
                 </div>
                 
+                <footer class="footer-codragon">
+                    Hecho con ❤️ por <a href="https://codragon.ct.ws/" target="_blank">Codragon</a>
+                </footer>
+
             </div>
             
             <div class="espaciador-flores"></div>
@@ -249,10 +278,8 @@
             // =========================================
             const contenedor = document.getElementById('contenedor-confirmacion');
             
-            // 1. Creamos una "llave" única para esta familia
             const storageKey = 'confirmado_' + (familia ? familia : 'invitado');
 
-            // 2. Función que pinta el botón verde de "Ya confirmado"
             function mostrarEstadoConfirmado() {
                 contenedor.innerHTML = `
                     <div class="reveal scale-in active" style="background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%); color: white; padding: 18px; border-radius: 35px; font-weight: 700; width: 90%; max-width: 350px; margin: 0 auto; box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4); letter-spacing: 2px;">
@@ -262,7 +289,6 @@
                 `;
             }
 
-            // 3. Revisamos si en el pasado YA habían confirmado
             if (localStorage.getItem(storageKey) === 'true') {
                 mostrarEstadoConfirmado();
             } else {
@@ -278,10 +304,8 @@
                         const whatsappUrl = `https://wa.me/528979713312?text=${encodeURIComponent(mensaje)}`;
                         window.open(whatsappUrl, '_blank');
 
-                        // 4. GUARDAR EN LA MEMORIA
                         localStorage.setItem(storageKey, 'true');
 
-                        // 5. Cambiar el diseño
                         mostrarEstadoConfirmado();
                     });
                 }
@@ -322,9 +346,6 @@
             }, 700); 
         }
 
-        // =========================================
-        // SCROLL REVEAL ANIMATIONS
-        // =========================================
         function initScrollAnimations() {
             const reveals = document.querySelectorAll('.reveal');
             
